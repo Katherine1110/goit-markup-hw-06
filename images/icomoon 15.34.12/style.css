@@ -1,0 +1,56 @@
+.icon-customers {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.iconname {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.iconbrand-icon {
+  width: 1.2548828125em;
+}
+
+.iconcompany-icon {
+  width: 0.9765625em;
+}
+
+.iconcube-icon {
+  width: 1.9775390625em;
+}
+
+.icondish {
+  width: 0.9423828125em;
+}
+
+.iconenvelope {
+  width: 1.4541015625em;
+}
+
+.iconfooter-twitter-icon {
+  width: 1.111328125em;
+}
+
+.iconfoster-icon {
+  width: 2em;
+}
+
+.iconnadline-icon {
+  width: 0.76953125em;
+}
+
+.iconvector {
+  width: 0.6669921875em;
+}
+
+.iconYaCo-icon {
+  width: 0.9375em;
+}
