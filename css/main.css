@@ -26,6 +26,7 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    padding-top: 80px;
 }
 
 
@@ -35,6 +36,9 @@ body {
 
 
 .nav-container {
+    /* position: fixed;
+    content: "";
+     */
     display: flex;
     align-items: center;
 
@@ -47,6 +51,13 @@ body {
 } 
 
 header {
+    position: fixed;
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--caption-text-color);
+    
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -247,7 +258,7 @@ header {
     white-space: pre-line;
 }
 
-.primary-btn {
+.order {
     font-weight:700;
     font-size: 16px;
     line-height: 1.87;
@@ -261,6 +272,8 @@ header {
     border-radius: 4px;
 
     padding: 10px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 /* Features */
@@ -584,6 +597,7 @@ img {
 
     display: flex;
     justify-content: space-between;
+    
 
     padding-bottom: 48px;
     padding-top: 48px;
@@ -592,9 +606,6 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.addres {
-    /* width: 231px; */
-}
 
 .footer-logo {
     display: inline-block;
@@ -676,7 +687,7 @@ img {
     padding-left: 0;
 
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-between; */
 }
 
 .footer-network:not(:last-child) {
@@ -706,33 +717,52 @@ img {
     fill: var(--caption-text-color);
 }
 
-/* .signup .email {
-    min-width: 270px;
-    height: 50px;
-    margin-right: 12px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color: inherit;
-    color: rgba(255, 255, 255, 0.6);
-    padding: 15px 12px;
+.form {
+    display: flex;
+    flex-direction: row;
 }
 
-.button {
-    background-color: var(--accent-text-color);
-    color: var(--caption-text-color);
-    padding: 10px 32px;
-    border-radius: 4px;
+.email {
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    text-decoration: none;
+    border-radius: 4px;
+    background: #2F303A;
+
+    width: 358px;
+
+    margin-right: 12px;
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    color: var(--caption-text-color);
+}
+
+.signup-btn {
+    display: inline-flex;
+    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-    display: inline-block;
-    min-width: 200px;
-    text-align: center;
-} */
+    text-transform: capitalize;
+
+    padding: 15px 12px;
+
+    align-items: center;
+    color: var(--caption-text-color);
+
+    width: 200px;
+    height: 50px;
+    background-color: var(--accent-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.send {
+    fill: black;
+    margin-left: 10px;
+}
 
 .caption-dev {
     font-size: 12px;
@@ -746,6 +776,101 @@ img {
     margin-bottom: 0;
 }
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2)
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+
+    background-color: var(--caption-text-color);
+}
+
+.modal-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(50%);
+    transform: translateY(-50%);
+
+    
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12)
+}
+
+.close {
+    background-image: url(../images/close-btn.svg);
+    background-size: contain;
+}
+
+.form {
+    display: block;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+.modal-title {   
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.form-input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 448px;
+    height: 40px;
+    margin-bottom: 28px;
+}
+
+.form-label {
+    color: var(--main-text-color);
+}
+
+.form-input:focus + .form-label {
+    color: var(--accent-text-color);
+    transform: translateY(-200%);
+    transform: translateX(-42px);
+}
+
+.form-field {
+    position: relative;
+}
+
+.form-label {
+    position: absolute;
+    /* top: 12px;
+    left: 42px; */
+    top: 0;
+    left: 42px;
+    transform: translateY(100%);
+    
+}
                                         /* Web Studio Portfolio page */
 
 .filter-container {
