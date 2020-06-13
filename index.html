@@ -50,7 +50,8 @@
         <section class="hero">
             <h1 class="hero-title">Эффективное решение
                  для вашего бизнеса</h1>
-            <a href="" class="primary-btn">Заказать услугу</a>
+            <!-- <a href="" class="primary-btn">Заказать услугу</a> -->
+            <button type="submit" class="order" data-modal-open>Заказать услугу</button>
         </section>
 
 
@@ -408,22 +409,57 @@
 
             <div class="signup">
                 <p class="footer-title">подписаться на рассылку</p>
-                <input class="email" type="email" name="email" id="elmail" value="E-mail">
-                <a href="" class="button">Подписаться</a>
+                <form>
+                    <div class="form">
+                        <input type="mail" name="email" id="email" placeholder="email@gmail.com" class="email">
+                        <button type="submit" class="signup-btn">подписаться
+                            <svg class="send" width="24" height="24">
+                                <use href="./images/icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>                   
+                </form>
             </div>
 
-            <form>
-                <!-- Клик по тексту "Сообщение" поставит курсор в поле ввода -->
-                <label for="message">Сообщение</label>
-                <input type="text" id="message" />
-              
-                <button type="submit">Отправить</button>
-              </form>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="modal-button close" data-modal-close></button>
+                <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+                <form class="form">
+                    <div class="form-field">
+                        
+                        <input type="text"  class="form-input" name="name" id="name">
+                        <label for="name" class="form-label">Имя</label>
+                    </div>
+                    <div class="form-field">
+                        
+                        <input type="tel"  class="form-input" name="tel" id="tel">
+                        <label for="tel" class="form-label">Телефон</label>
+                    </div>
+                    <div class="form-field">
+                        
+                        <input type="email"  class="form-input" name="email" id="email">
+                        <label for="email" class="form-label">Почта</label>
+                    </div>
+                    <div class="form-field">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <p>соглашаюсь с рассылкой и принимаю Условия договора</p>
+                    </div>
+                    <div>
+                        <button type="submit"> отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>     
 
             
         </div>
         
         <p class="caption-dev">2020 | Developed by GoIT Students</p>
     </footer>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
