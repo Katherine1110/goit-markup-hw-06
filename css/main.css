@@ -855,7 +855,6 @@ img {
     top: 50%;
     left: 19px;
     transform: translateY(-100%);
-    
 
     fill: var(--title-text-color);
 }
