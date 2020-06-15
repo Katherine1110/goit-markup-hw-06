@@ -192,9 +192,7 @@ header {
 
     fill: var(--main-text-color);
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 
 .contacts-link:hover .envelope,
@@ -265,6 +263,9 @@ header {
     letter-spacing: 0.06em;
     color: var(--caption-text-color);
     text-decoration: none;
+
+    border: transparent;
+    outline-color: var(--accent-text-color);
 
     min-width: 200px;
     height: 50px;
@@ -809,18 +810,21 @@ img {
     right: 0;
     transform: translateX(50%);
     transform: translateY(-50%);
-
     
-    width: 30px;
-    height: 30px;
     border-radius: 50%;
     background: #FFFFFF;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12)
 }
 
-.close {
-    background-image: url(../images/close-btn.svg);
+.modal-button.close {
+    width: 30px;
+    height: 30px;
+    
+    /* background-image: url(../images/close-btn.svg);
     background-size: contain;
+    background-repeat: no-repeat; */
+    border: transparent;
+    outline-color: var(--accent-text-color);   
 }
 
 .form {
@@ -850,7 +854,27 @@ img {
 
 .form-label {
     color: var(--main-text-color);
+    margin-left: 10px;
 }
+
+.input-icon {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    margin-left: 19px;
+    width: 18px;
+    height: 18px;
+    fill: black;
+    background-color: blue;
+}
+/* .form-label::before {
+    background-image: url(../images/person-icon.svg);
+    content: "";
+    width: 18px;
+    height: 18px;
+    fill: var(--title-text-color);
+    background-size: contain;
+} */
 
 .form-input:focus + .form-label {
     color: var(--accent-text-color);
@@ -870,6 +894,57 @@ img {
     left: 42px;
     transform: translateY(100%);
     
+}
+
+.form-field > textarea {
+    width: 448px;
+    height: 120px;
+    resize: none;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 16px;
+}
+
+.form-field.area {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contract {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.contract-caption {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+}
+
+.contract-caption > a {
+    margin: 0;
+    color: var(--accent-text-color);
+}
+
+.send-btn {
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+    outline-color: var(--accent-text-color);
+    color: var(--caption-text-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
 }
                                         /* Web Studio Portfolio page */
 
