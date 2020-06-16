@@ -54,6 +54,59 @@
             <button type="submit" class="order" data-modal-open>Заказать услугу</button>
         </section>
 
+        <!-- Modal -->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+               
+                <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+                <form class="form" autocomplete="off">
+                    <div class="form-field">
+                        <input type="text"  class="form-input" name="name" id="name" placeholder=" ">
+                        <label for="name" class="form-label">Имя</label>
+                        <svg class="input-icon" width="18" height="18">
+                            <use href="./images/sprite.svg#iconperson-icon"></use>
+                        </svg>
+                    </div>
+
+                    <div class="form-field">
+                        <input type="tel"  class="form-input" name="tel" id="tel" placeholder=" ">
+                        <label for="tel" class="form-label">Телефон</label>
+                        <svg class="input-icon"  width="18" height="18">
+                            <use href="./images/sprite.svg#iconphone-modal"></use>
+                        </svg> 
+                    </div>
+                    
+                    <div class="form-field">
+                        <input type="email"  class="form-input" name="e-mail" id="e-mail" placeholder=" ">
+                        <label for="e-mail" class="form-label">Почта</label>
+                        <svg class="input-icon" width="18" height="18">
+                            <use href="./images/sprite.svg#iconenvelope-modal"></use>
+                        </svg> 
+                    </div>
+           
+                    <div class="form-field area">
+                        <textarea name="text-area" id="comment" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                    </div>
+                    <div class="contract">
+                        <label class="field">
+                            <input class="checkbox" type="checkbox" name="topic" value="html" />
+                            <span class="icon"></span>
+                            <span class="label">
+                                Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit" class="send-btn"> Отправить</button>
+                    </div>
+                </form>
+                 <button class="modal-button close" data-modal-close>
+                    <svg class="close-btn" width="11" height="11">
+                        <use href="./images/sprite-icon.svg#iconclose-btn"></use>
+                    </svg>
+                </button>
+            </div>
+        </div> 
 
         
         <!-- Features -->
@@ -419,65 +472,7 @@
                         </button>
                     </div>                   
                 </form>
-            </div>
-
-        <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-               
-                <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-                <form class="form">
-                    <div class="form-field">
-                        <input type="text"  class="form-input" name="name" id="name">
-                        <label for="name" class="form-label">Имя</label>
-                        <svg class="input-icon" width="18" height="18">
-                            <use href="./images/sprite.svg#iconperson-icon"></use>
-                        </svg>
-                    </div>
-
-                    <div class="form-field">
-                        <input type="tel"  class="form-input" name="tel" id="tel">
-                        <label for="tel" class="form-label">Телефон</label>
-                        <svg class="input-icon"  width="18" height="18">
-                            <use href="./images/sprite.svg#iconphone-modal"></use>
-                        </svg> 
-                    </div>
-                    
-                    <div class="form-field">
-                        <input type="email"  class="form-input" name="e-mail" id="e-mail">
-                        <label for="e-mail" class="form-label">Почта</label>
-                        <svg class="input-icon" width="18" height="18">
-                            <use href="./images/sprite.svg#iconenvelope-modal"></use>
-                        </svg> 
-                    </div>
-           
-                    <div class="form-field area">
-                        <textarea name="text-area" id="comment" cols="30" rows="10" placeholder="Комментарий"></textarea>
-                    </div>
-                    <div class="contract">
-                        <!-- <div class="form-field">
-                            <input type="checkbox" class="form-input" name="hobby" value="sports" id="sports">
-                            <label class="form-label" for="sports">Спорт</label>
-                          </div> -->
-                        
-                        <p class="contract-caption">
-                            <svg class="send" width="16" height="15">
-                                <use href="./images/sprite-icon.svg#iconcheck-box"></use>
-                            </svg>
-                            Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a> </p>
-                    </div>
-                    <div class="submit-btn">
-                        <button type="submit" class="send-btn"> Отправить</button>
-                    </div>
-                </form>
-                 <button class="modal-button close" data-modal-close>
-                    <svg class="close-btn" width="11" height="11">
-                        <use href="./images/sprite-icon.svg#iconclose-btn"></use>
-                    </svg>
-                </button>
-            </div>
-        </div>     
-
-            
+            </div>         
         </div>
         
         <p class="caption-dev">2020 | Developed by GoIT Students</p>
